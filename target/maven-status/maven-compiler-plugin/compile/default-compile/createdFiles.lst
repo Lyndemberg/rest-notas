@@ -1,0 +1,5 @@
+model/Nota_.class
+model/Nota.class
+resources/NotaResource.class
+interfaces/NotaDao.class
+dao/NotaDaoImpl.class
