@@ -1,6 +1,5 @@
 package resources;
 
-import com.google.gson.Gson;
 import dao.NotaDaoImpl;
 import interfaces.NotaDao;
 import java.util.List;
@@ -14,6 +13,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
+import javax.xml.ws.ResponseWrapper;
 import model.Nota;
 
 /**
@@ -30,9 +30,9 @@ public class NotaResource {
     }
     
     @POST
-    @Path("/save")
+    @Path("/save")    
     @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.TEXT_PLAIN)
+    @Produces(MediaType.TEXT_PLAIN)    
     public String salvar(Nota nova){
         if(dao.salvar(nova)){
             return "Nota salva com sucesso!";
